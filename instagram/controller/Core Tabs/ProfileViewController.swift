@@ -77,7 +77,7 @@ extension  ProfileViewController: UICollectionViewDelegate,UICollectionViewDataS
         collectionView.deselectItem(at: indexPath, animated: true)
         let model = UserPosts[indexPath.row]
         let user = user(username: "joe", bio: "", name: (first:"",last:""), birthdate: Date(), gender: .male, counts: usercount(followers: 1, following: 1, posts: 1), profilephoto: URL(string: "https://www.google.com")!)
-        let post = UserPost(posttype: .photo, thumbnailimage: URL(string: "https://www.google.com")!, posturl: URL(string: "https://www.google.com")!, caption: nil, likecount: [], comments: [], postDate: Date(), tagpost: [], owner: user)
+        let post = UserPost(posttype: .photo, thumbnailimage: URL(string: "https://www.google.com")!, posturl: URL(string: "https://www.google.com")!, caption: nil, likecount: [], comments: [], postdate: Date(), tagpost: [], owner: user)
         let vc = PostViewController(model: post)
         vc.title = post.posttype.rawValue
         vc.navigationItem.largeTitleDisplayMode = .never

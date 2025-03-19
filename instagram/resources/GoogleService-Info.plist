@@ -26,5 +26,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:644752417190:ios:14de3616e2435abeb12f67</string>
+	<key>DATABASE_URL</key>
+	<string>https://instagram-9d2c5-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

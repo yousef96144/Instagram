@@ -40,14 +40,14 @@ class HomeViewController: UIViewController {
     
     func createmocksmodel(){
         let user = user(username: "@joeaidy", bio: "", name: (first:"",last:""), birthdate: Date(), gender: .male, counts: usercount(followers: 1, following: 1, posts: 1), profilephoto: URL(string: "https://www.google.com")!)
-        let post = UserPost(posttype: .photo, thumbnailimage: URL(string: "https://www.google.com")!, posturl: URL(string: "https://www.google.com")!, caption: nil, likecount: [], comments: [], postDate: Date(), tagpost: [], owner: user)
+        let post = UserPost(posttype: .photo, thumbnailimage: URL(string: "https://www.google.com")!, posturl: URL(string: "https://www.google.com")!, caption: nil, likecount: [], comments: [], postdate: Date(), tagpost: [], owner: user)
         
         var comments = [postcomment]()
         
         for x in 0..<2 {
             comments.append(postcomment(identifier: "\(x)", username: "@jenny", text: "this the best post i have seen", createddate: Date(), likes: []))
         }
-        for x in 0..<5{
+                for x in 0..<5{
             let viewmodel = homefeedrenderviewmodel(header: postrenderviewmodel(rendertype: .header(provider: user)), post: postrenderviewmodel(rendertype: .primarycontent(provider: post)), actions: postrenderviewmodel(rendertype: .action(provider: "")), comments: postrenderviewmodel(rendertype: .comments(comments: comments)))
             feedrendermodels.append(viewmodel)
         }

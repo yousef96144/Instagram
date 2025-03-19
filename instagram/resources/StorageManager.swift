@@ -43,9 +43,3 @@ public class StorageManager{
 
     
     
-public enum userposttype: String{
-        case photo = "photo"
-        case video = "video"
-    }
-    // represent a userpost
-   

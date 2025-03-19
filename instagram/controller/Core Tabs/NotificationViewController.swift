@@ -98,7 +98,7 @@ final class NotificationViewController: UIViewController,UITableViewDelegate,UIT
     private func fetchnotification(){
         for x in 0...100 {
             let user = user(username: "joe", bio: "", name: (first:"",last:""), birthdate: Date(), gender: .male, counts: usercount(followers: 1, following: 1, posts: 1), profilephoto: URL(string: "https://www.google.com")!)
-            let post = UserPost(posttype: .photo, thumbnailimage: URL(string: "https://www.google.com")!, posturl: URL(string: "https://www.google.com")!, caption: nil, likecount: [], comments: [], postDate: Date(), tagpost: [], owner: user)
+            let post = UserPost(posttype: .photo, thumbnailimage: URL(string: "https://www.google.com")!, posturl: URL(string: "https://www.google.com")!, caption: nil, likecount: [], comments: [], postdate: Date(), tagpost: [], owner: user)
             let model = UserNotification(type: x % 2 == 0 ? .Like(post: post) : .Follow(followstate: .notfollowing), text: "Hello World", user: user )
             models.append(model)
         }
